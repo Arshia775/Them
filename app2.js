@@ -23,8 +23,6 @@ function init(){
     document.siteName = $('title').html();
     $('body').addClass("mdui-theme-primary-blue-grey mdui-theme-accent-blue");
 	
-	var html= `
-	<script>
 function myFunction() {
   var copyText = document.getElementById("mdui-textfield-input23");
   copyText.select();
@@ -39,8 +37,6 @@ function outFunc() {
   var tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "Copy to clipboard";
 }
-</script>
-	`;
     var html = `
 	<style>
 .tooltip {
