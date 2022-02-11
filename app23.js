@@ -23,20 +23,6 @@ function init(){
     document.siteName = $('title').html();
     $('body').addClass("mdui-theme-primary-blue-grey mdui-theme-accent-blue");
 	
-function myFunction() {
-  var copyText = document.getElementById("mdui-textfield-input23");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(copyText.value);
-  
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "متن کپی شد!!";
-}
-
-function outFunc() {
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copy to clipboard";
-}
     var html = `
 	<style>
 .tooltip {
@@ -176,7 +162,7 @@ function list(path){
     $.post(path,'{"password":"'+password+'"}', function(data,status){
         var obj = jQuery.parseJSON(data);
         if(typeof obj != 'null' && obj.hasOwnProperty('error') && obj.error.code == '401'){
-            var pass = prompt("Directory encryption, Please enter password","");
+            var pass = prompt("目录加密, 请输入密码","");
             localStorage.setItem('password'+path, pass);
             if(pass != null && pass != ""){
                 list(path);
